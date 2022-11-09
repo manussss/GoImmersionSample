@@ -17,7 +17,7 @@ func (suite *OrderRepositoryTestSuit) SetupSuite() {
 	db, err := sql.Open("sqlite3", ":memory:")
 
 	suite.NoError(err)
-	db.Exec("CREATE TABLE orders (id VARCHAR(255), price INT, tax INT, final_price INT)")
+	db.Exec("CREATE TABLE orders (id varchar(255), price float, tax float, final_price float)")
 	suite.Db = db
 }
 
